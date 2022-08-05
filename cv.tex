@@ -14,10 +14,8 @@
 \usepackage{multicol}
 \input{glyphtounicode}
 
-\newcommand{\removelinebreaks}[1]{%
-    \begingroup\def\\{ }#1\endgroup}
 
-%----------FONT SETUP----------
+%----------FONT----------
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -64,16 +62,6 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeMultiSubheading}[6]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #6} \\ 
-      \textit{\small#4} \\
-      \textit{\small#5} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -94,102 +82,186 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-16cm-\leftmargin\relax]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%----------CV STARTS HERE----------
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Austin Heath} \\ \vspace{1pt}
-    \small +1 123-456-7890 $|$ \href{mailto:austin@heath.codes}{\underline{austin@heath.codes}} $|$
-    \href{https://austin.heath.codes}{\underline{https://austin.heath.codes}} \\ \vspace{1pt}
-    \href{https://github.com/one2blame}{\underline{https://github.com/one2blame}} $|$
-    \href{https://linkedin.com/in/austinjheath}{\underline{https://linkedin.com/in/austinjheath}} \\ \vspace{1pt}
-    Clearance: TS/SCI with CI Poly
+	\textbf{\Huge \scshape Austin J. Heath} \\ \vspace{1pt}
+	\small +1 601-596-2842 $|$ \href{mailto:austin@heath.codes}{\underline{austin@heath.codes}} $|$
+	\href{https://austin.heath.codes}{\underline{https://austin.heath.codes}} \\ \vspace{1pt}
+	\href{https://github.com/one2blame}{\underline{https://github.com/one2blame}} $|$
+	\href{https://linkedin.com/in/austinjheath}{\underline{https://linkedin.com/in/austinjheath}} \\ \vspace{1pt}
+	Clearance: TS/SCI with CI Poly
 \end{center}
 
 %-----------EXPERIENCE-----------
 \section{\textbf{Experience}}
-  \resumeSubHeadingListStart
-    \resumeMultiSubheading
-      {U.S. Army Cyber Command}{January 2019 -- Present}
-      {Development Crew Lead}{Senior Security Researcher}{Software Engineer}{Augusta, GA}
+\resumeSubHeadingListStart
 
-      \resumeItemListStart
-        \resumeItem{TODO}
-      \resumeItemListEnd 
+\resumeSubheading
+{Senior Security Researcher}{January 2019 – Present}
+{U.S. Army Cyber Command - Cyber Solutions Development}{Fort Gordon, GA}
+\resumeItemListStart
+\resumeItem{Managed a team of 12 security researchers using tools like Ghidra, IDAPro, BinaryNinja, BinDiff, LLVM, AFL, Mayhem, and QEMU, to research, discover, and exploit vulnerabilities in embedded devices and Windows applications, saving the organization over \$1mil in expected costs when compared to similar vendor solutions.}
+\resumeItem{Developed a shellcode library using C, Python, and CMake, enabling developers to cross-compile ubiquitous shellcodes for Intel, ARM, MIPS, and PowerPC processor architectures, reducing the organization's codebase by 30\%.}
+\resumeItem{Redesigned the organization's binary obfuscation methods using LLVM, reducing effective binary decompilation by 90\%.}
+\resumeItem{Explored methods to obfuscate web-based malware written in PHP using open source software, and designed command, control, and configuration mechanisms using Python.}
+\resumeItem{Assessed operational value of public vulnerability disclosures and rapidly reverse-engineered, modified, and released bespoke exploit tools, enabling mission success for operations teams across multiple organizations and services.}
+\resumeItem{Consulted operational teams on the use of exploit tools, increasing stakeholder interaction and influencing organizational policy to emphasize consistent stakeholder engagement.}
+\resumeItem{Mentored 12 employees and hosted monthly training events covering reverse-engineering and exploit development techniques, increasing the organization's number of trained personnel by 25\%.}
+\resumeItem{Implemented modules for a Python exploit framework, automating common operator tasks and reducing human interaction, increasing operational efficiency.}
+\resumeItem{Overhauled the organization's technical documentation process using Markdown, LaTeX, Pandoc, CMake, and Python, reducing documentation  errors by 20\%.}
+\resumeItem{Automated the organization's compilation, testing, release, and deployment process by integrating existing projects into GitLab CI, expediting tool development and release by 50\%.}
+\resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
+%-----------VOLUNTEERING AND COMMUNITY SERVICE-----------
+\section{\textbf{Volunteering and Community Service}}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Volunteer}{August 2019 – March 2020}
+{Girls Who Code}{Augusta, GA}
+\resumeItemListStart
+\resumeItem{Facilitated club meetings and taught 6th - 12th grade girls Python game development.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Volunteer}{May 2021 - July 2021}
+{Cyber Patriot}{Augusta, GA}
+\resumeItemListStart
+\resumeItem{Moderated a Virtual Cyber Patriot Summer Camp via Zoom and provided instruction to high-school students on techniques to harden the security posture of various Linux distributions.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Mentor}{February 2022 – May 2022}
+{Grovetown High-school Robotics Club}{Grovetown, GA}
+\resumeItemListStart
+\resumeItem{Mentored high-school students on robotics mechanical engineering, setup of electrical components, and development of Arduino code for controller logic.}
+\resumeItem{Lead the Grovetown High-school Robotics Team to take 1st place in the Central Savannah River Area (CSRA) Fully Wired high-school robotics competition.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{\textbf{Projects}}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Distributed File System} $|$ \href{https://github.com/one2blame/cs6200}{\underline{https://github.com/one2blame/cs6200}} $|$ \emph{C++, gRPC, Protobuf}}{November 2019}
+\resumeItemListStart
+\resumeItem{Engineered a concurrent server capable of handling clients initiating asynchronous gRPC requests to upload and download files.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Extensible MapReduce Framework} $|$ \href{https://github.com/one2blame/cs6210}{\underline{https://github.com/one2blame/cs6210}} $|$ \emph{C++, gRPC, Protobuf}}{April 2020}
+\resumeItemListStart
+\resumeItem{Designed an extensible, distributed system to MapReduce a large corpus of data, applying data sharding and load balancing to enhance performance.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{The Dark Arts} $|$ \href{https://one2bla.me/the-dark-arts/}{\underline{https://one2bla.me/the-dark-arts/}} $|$ \emph{C, Python, Ghidra, pwntools, angr}}{July 2020 - Present}
+\resumeItemListStart
+\resumeItem{Composed a blog to catalogue my adventures in reverse-engineering and binary exploitation, serving as a training resource for junior security researchers.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{SDN Firewall} $|$ \href{https://github.com/one2blame/cs6250}{\underline{https://github.com/one2blame/cs6250}} $|$ \emph{Python, Mininet, OpenFlow, POX}}{March 2021}
+\resumeItemListStart
+\resumeItem{Constructed an emulated network to test software-defined network firewall rules, programming real-time traffic inspection to enforce access controls.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Splinter Shell} $|$ \href{https://github.com/one2blame/splinter-shell}{\underline{https://github.com/one2blame/splinter-shell}} $|$ \emph{C, Python, NumPy, amd64}}{April 2021 - Present}
+\resumeItemListStart
+\resumeItem{Employed unsupervised learning techniques to train a machine learning model on a corpus of packet captures, classifying normal and malicious network traffic and encoding shellcodes to bypass intrusion prevention systems.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Data Dependency Tracker} $|$ \href{https://github.com/one2blame/cs6747}{\underline{https://github.com/one2blame/cs6747}} $|$ \emph{Python, Ghidra}}{July 2021}
+\resumeItemListStart
+\resumeItem{Wrote Python scripts to parse Ghidra disassembly, generating control flow graphs and data dependency tracking for functions in malware specimens.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Constraint-based Variable Analyzer} $|$ \href{https://github.com/one2blame/cs6340}{\underline{https://github.com/one2blame/cs6340}} $|$ \emph{C++, LLVM, Z3}}{October 2021}
+\resumeItemListStart
+\resumeItem{Transformed programs into LLVM intermediate representation (IR), derived Datalog facts from the instructions, and designed a reaching definition and live variables analysis using Z3.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Stock Trading Robot} $|$ \href{https://github.com/one2blame/cs7646}{\underline{https://github.com/one2blame/cs7646}} $|$ \emph{Python, NumPy, pandas}}{April 2022}
+\resumeItemListStart
+\resumeItem{Employed reinforcement learning to train a model on historical stock metrics, assessing the trading robot's performance on out-of-sample data, outperforming a manual trading strategy by 30\%.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Multi-class Random Forest} $|$ \href{https://github.com/one2blame/cs6601}{\underline{https://github.com/one2blame/cs6601}} $|$ \emph{Python, NumPy}}{July 2022}
+\resumeItemListStart
+\resumeItem{Improved upon existing multi-class classification tree and random forest implementations, achieving a classification accuracy of 84\% on out-of-sample data.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
 \section{\textbf{Education}}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science, Computer Science (Specialization: Computing Systems), 4.0 GPA}{December 2022}
-    \resumeSubheading
-      {U.S. Army Cyber Center of Excellence}{Augusta, GA}
-      {Cyber Basic Officer Leader Course, Distinguished Honor Graduate}{December 2018}
-    \resumeSubheading
-      {Mississippi State University}{Starkville, MS}
-      {Bachelor of Science, Computer Science, 3.61 GPA (Magna Cum Laude)}{December 2017}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{Georgia Institute of Technology}{Atlanta, GA}
+{Master of Science, Computer Science (Specialization: Computing Systems), 4.0 GPA}{December 2022}
+\resumeSubheading
+{U.S. Army Cyber Center of Excellence}{Augusta, GA}
+{Cyber Basic Officer Leader Course, Distinguished Honor Graduate}{December 2018}
+\resumeSubheading
+{Mississippi State University}{Starkville, MS}
+{Bachelor of Science, Computer Science, 3.61 GPA (Magna Cum Laude)}{December 2017}
+\resumeSubHeadingListEnd
 
 %-----------CERTIFICATIONS-----------
 \section{\textbf{Certifications}}
 \vspace{-5mm}
 \setlength{\columnsep}{50pt}
 \begin{multicols}{2}
-    \begin{itemize}[noitemsep]
-        \small{\item[] {Offensive Security Certified Professional (OSCP) \\ 
-            \mbox{Certified Information Systems Security Professional (CISSP)} \\
-            GIAC Reverse Engineering Malware (GREM) \\
-            CompTIA Security+ (Sec+) \\ 
-            Certified Ethical Hacker (CEH) \\
-            Cisco Certified Network Associate (CCNA)
-        }}
-    \end{itemize}
+	\begin{itemize}[noitemsep]
+		\small{\item[] {Offensive Security Certified Professional (OSCP) \\
+			\mbox{Certified Information Systems Security Professional (CISSP)} \\
+			GIAC Reverse Engineering Malware (GREM) \\
+			CompTIA Security+ (Sec+) \\
+			Certified Ethical Hacker (CEH) \\
+			Cisco Certified Network Associate (CCNA)
+			}}
+	\end{itemize}
 \end{multicols}
 
-%-----------PROJECTS-----------
-\section{\textbf{Projects}}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+%-----------TECHNICAL SKILLS-----------
+\section{\textbf{Technical Skills}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		            \textbf{Languages}{: Python, C/C++, x86, amd64, MIPS, ARM, PowerPC, TileGX, Java, PHP, JavaScript} \\
+		            \textbf{Libraries}{: gRPC, OpenMP/MPI, libvirt, libcurl, POX, Mininet, OpenFlow, LLVM, Z3, NumPy, SciPy, pandas, pwntools} \\
+		            \textbf{Developer Tools}{: Git, GitLab CI, Atlassian Bamboo, Jupyter, Docker, QEMU, GDB, WinDbg, angr, AFL, KLEE} \\
+		            \textbf{Applications}{: VMware, VirtualBox, Vagrant, Ghidra, IDAPro, BinaryNinja, BinDiff} \\
+		            \textbf{Frameworks}{: Metasploit, WordPress}
+		      }}
+\end{itemize}
 
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{\textbf{Progamming Languages, Libraries, and Tools}}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}: \\
-         \hspace{1cm} \textit{Daily}: \hspace{0.15cm} Python, C, x86/amd64, Bash \\
-         \hspace{1cm} \textit{Frequently}: \hspace{0.15cm} C++, CMake, Make, LaTeX, Markdown \\
-         \hspace{1cm} \textit{Familiar}: \hspace{0.15cm}  ARM, MIPS, PowerPC, TileGX, Java, PHP, JavaScript }}
-    \small{\item{
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
-
+%-----------ACHIEVEMENTS AND AWARDS-----------
+\section{\textbf{Achievements and Awards}}
+\setlength{\columnsep}{50pt}
+\begin{itemize}[noitemsep]
+	\small{\item[] {\mbox{CISA President's Cup Cybersecurity Competition - 3rd Place} \hspace{1cm}
+		\mbox{3 x Army Achievement Medals}
+		}}
+\end{itemize}
 
 %-------------------------------------------
 \end{document}
+

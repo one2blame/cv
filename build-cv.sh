@@ -12,6 +12,11 @@ build_container () {
 }
 
 
+format_cv () {
+    $docker run --volume `pwd`:/data one2blame-cv latexindent --silent --outputfile=cv.tex cv.tex
+}
+
+
 build_cv () {
     $docker run --volume `pwd`:/data one2blame-cv pdflatex cv.tex
 }
@@ -19,4 +24,5 @@ build_cv () {
 
 check_deps
 build_container
+format_cv
 build_cv
