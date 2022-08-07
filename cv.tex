@@ -49,7 +49,13 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
+  \item[-] \small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemBulletless}[1]{
+  \item[] \small{
     {#1 \vspace{-2pt}}
   }
 }
@@ -106,19 +112,25 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Senior Security Researcher}{January 2019 – Present}
+{Senior Security Researcher}{June 2021 – Present}
 {U.S. Army Cyber Command - Cyber Solutions Development}{Fort Gordon, GA}
 \resumeItemListStart
-\resumeItem{Managed a team of 12 security researchers using tools like Ghidra, IDAPro, BinaryNinja, BinDiff, LLVM, AFL, Mayhem, and QEMU, to research, discover, and exploit vulnerabilities in embedded devices and Windows applications, saving the organization over \$1mil in expected costs when compared to similar vendor solutions.}
-\resumeItem{Developed a shellcode library using C, Python, and CMake, enabling developers to cross-compile ubiquitous shellcodes for Intel, ARM, MIPS, and PowerPC processor architectures, reducing the organization's codebase by 30\%.}
-\resumeItem{Redesigned the organization's binary obfuscation methods using LLVM, reducing effective binary decompilation by 90\%.}
-\resumeItem{Explored methods to obfuscate web-based malware written in PHP using open source software, and designed command, control, and configuration mechanisms using Python.}
-\resumeItem{Assessed operational value of public vulnerability disclosures and rapidly reverse-engineered, modified, and released bespoke exploit tools, enabling mission success for operations teams across multiple organizations and services.}
-\resumeItem{Consulted operational teams on the use of exploit tools, increasing stakeholder interaction and influencing organizational policy to emphasize consistent stakeholder engagement.}
-\resumeItem{Mentored 12 employees and hosted monthly training events covering reverse-engineering and exploit development techniques, increasing the organization's number of trained personnel by 25\%.}
-\resumeItem{Implemented modules for a Python exploit framework, automating common operator tasks and reducing human interaction, increasing operational efficiency.}
-\resumeItem{Overhauled the organization's technical documentation process using Markdown, LaTeX, Pandoc, CMake, and Python, reducing documentation  errors by 20\%.}
-\resumeItem{Automated the organization's compilation, testing, release, and deployment process by integrating existing projects into GitLab CI, expediting tool development and release by 50\%.}
+\resumeItem{Managed a team of 12 security researchers using tools like IDAPro, BinDiff, LLVM, and QEMU, to research, discover, and exploit vulnerabilities in embedded devices and Windows applications, saving the organization over \$1mil in expected costs when compared to similar vendor solutions.}
+\resumeItem{Developed a shellcode library using C, Python, and CMake, enabling developers to cross-compile ubiquitous shellcodes for Intel, ARM, MIPS, and PowerPC processor architectures, eliminating duplicate shellcodes across the organization's codebase.}
+\resumeItem{Triaged public vulnerability disclosures and rapidly reverse-engineered, modified, and released bespoke exploit tools, providing initial access to computer networks of interest for operations teams across multiple organizations and uniformed services.}
+\resumeItem{Instructed operations teams on the effective use of exploit tools, increasing stakeholder interaction and influencing organizational policy to emphasize consistent stakeholder engagement.}
+\resumeItem{Hosted monthly training events covering reverse-engineering and exploit development techniques, increasing the organization's number of trained security researchers by 25\%.}
+\resumeItem{Overhauled the organization's technical documentation process using Markdown, LaTeX, Pandoc, CMake, and Python, enabling developers to better detect documentation errors prior to release.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Junior Security Researcher}{January 2019 – May 2021}
+{U.S. Army Cyber Command - Cyber Solutions Development}{Fort Gordon, GA}
+\resumeItemListStart
+\resumeItem{Redesigned the organization's binary obfuscation methods using LLVM, rendering obfuscated artifacts unrecognizable compared to the original, inhibiting effective reverse-engineering efforts and increasing the operational longevity of cyber capabilities.}
+\resumeItem{Implemented modules for a Python exploit framework, automating common operator tasks and reducing human interaction, increasing mission efficiency for all operations teams.}
+\resumeItem{Automated the organization's compilation, testing, release, and deployment process by integrating existing projects into GitLab CI, expediting tool development and release for all developer teams.}
+\resumeItem{Obfuscated web-based malware written in PHP using open source software and designed command, control, and configuration mechanisms using Python.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -128,25 +140,24 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Volunteer}{August 2019 – March 2020}
-{Girls Who Code}{Augusta, GA}
+{Mentor}{February 2022 – May 2022}
+{Grovetown High-school Robotics Club}{Grovetown, GA}
 \resumeItemListStart
-\resumeItem{Facilitated club meetings and taught 6th - 12th grade girls Python game development.}
+\resumeItemBulletless{Mentored high-school students on robotics mechanical engineering, setup of electrical components, and development of Arduino code for controller logic. Lead the Grovetown High-school Robotics Club to take 1st place in the Central Savannah River Area (CSRA) Fully Wired high-school robotics competition.}
 \resumeItemListEnd
 
 \resumeSubheading
 {Volunteer}{May 2021 - July 2021}
 {Air Force Association CyberPatriot}{Augusta, GA}
 \resumeItemListStart
-\resumeItem{Moderated a Virtual CyberPatriot Summer Camp via Zoom and provided instruction to high-school students on techniques to harden the security posture of various Linux distributions.}
+\resumeItemBulletless{Moderated a Virtual CyberPatriot Summer Camp via Zoom and provided instruction to high-school students on techniques to harden the security posture of various Linux distributions.}
 \resumeItemListEnd
 
 \resumeSubheading
-{Mentor}{February 2022 – May 2022}
-{Grovetown High-school Robotics Club}{Grovetown, GA}
+{Volunteer}{August 2019 – March 2020}
+{Girls Who Code}{Augusta, GA}
 \resumeItemListStart
-\resumeItem{Mentored high-school students on robotics mechanical engineering, setup of electrical components, and development of Arduino code for controller logic.}
-\resumeItem{Lead the Grovetown High-school Robotics Team to take 1st place in the Central Savannah River Area (CSRA) Fully Wired high-school robotics competition.}
+\resumeItemBulletless{Facilitated club meetings and taught 6th - 12th grade girls Python game development.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -155,58 +166,59 @@
 \section{\textbf{Projects}}
 
 \resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{Distributed File System} $|$ \href{https://github.com/one2blame/cs6200}{\underline{https://github.com/one2blame/cs6200}} $|$ \emph{C++, gRPC, Protobuf}}{November 2019}
-\resumeItemListStart
-\resumeItem{Engineered a concurrent server capable of handling clients initiating asynchronous gRPC requests to upload and download files.}
-\resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{Extensible MapReduce Framework} $|$ \href{https://github.com/one2blame/cs6210}{\underline{https://github.com/one2blame/cs6210}} $|$ \emph{C++, gRPC, Protobuf}}{April 2020}
+{\textbf{Splinter Shell} $|$ \href{https://github.com/one2blame/splinter-shell}{\underline{https://github.com/one2blame/splinter-shell}} $|$ \emph{C, Python, NumPy, amd64}}{April 2021 - Present}
 \resumeItemListStart
-\resumeItem{Designed an extensible, distributed system to MapReduce a large corpus of data, applying data sharding and load balancing to enhance performance.}
+\resumeItemBulletless{Employed unsupervised learning techniques to train a machine learning model on a corpus of packet captures, classifying normal and malicious network traffic and encoding shellcodes to bypass intrusion prevention systems.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{The Dark Arts} $|$ \href{https://one2bla.me/the-dark-arts/}{\underline{https://one2bla.me/the-dark-arts/}} $|$ \emph{C, Python, Ghidra, pwntools, angr}}{July 2020 - Present}
 \resumeItemListStart
-\resumeItem{Composed a blog to catalogue my adventures in reverse-engineering and binary exploitation, serving as a training resource for junior security researchers.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{SDN Firewall} $|$ \href{https://github.com/one2blame/cs6250}{\underline{https://github.com/one2blame/cs6250}} $|$ \emph{Python, Mininet, OpenFlow, POX}}{March 2021}
-\resumeItemListStart
-\resumeItem{Constructed an emulated network to test software-defined network firewall rules, programming real-time traffic inspection to enforce access controls.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{Splinter Shell} $|$ \href{https://github.com/one2blame/splinter-shell}{\underline{https://github.com/one2blame/splinter-shell}} $|$ \emph{C, Python, NumPy, amd64}}{April 2021 - Present}
-\resumeItemListStart
-\resumeItem{Employed unsupervised learning techniques to train a machine learning model on a corpus of packet captures, classifying normal and malicious network traffic and encoding shellcodes to bypass intrusion prevention systems.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{Data Dependency Tracker} $|$ \href{https://github.com/one2blame/cs6747}{\underline{https://github.com/one2blame/cs6747}} $|$ \emph{Python, Ghidra}}{July 2021}
-\resumeItemListStart
-\resumeItem{Wrote Python scripts to parse Ghidra disassembly, generating control flow graphs and data dependency tracking for functions in malware specimens.}
+\resumeItemBulletless{Composed a blog to catalogue my adventures in reverse-engineering and binary exploitation, serving as a training resource for junior security researchers.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{Constraint-based Variable Analyzer} $|$ \href{https://github.com/one2blame/cs6340}{\underline{https://github.com/one2blame/cs6340}} $|$ \emph{C++, LLVM, Z3}}{October 2021}
 \resumeItemListStart
-\resumeItem{Transformed programs into LLVM intermediate representation (IR), derived Datalog facts from the instructions, and designed a reaching definition and live variables analysis using Z3.}
+\resumeItemBulletless{Transformed programs into LLVM intermediate representation (IR), derived Datalog facts from the instructions, and designed a reaching definition and live variables analysis using Z3.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Data Dependency Tracker} $|$ \href{https://github.com/one2blame/cs6747}{\underline{https://github.com/one2blame/cs6747}} $|$ \emph{Python, Ghidra}}{July 2021}
+\resumeItemListStart
+\resumeItemBulletless{Wrote Python scripts to parse Ghidra disassembly, generating control flow graphs and data dependency tracking for functions in malware specimens.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{Stock Trading Robot} $|$ \href{https://github.com/one2blame/cs7646}{\underline{https://github.com/one2blame/cs7646}} $|$ \emph{Python, NumPy, pandas}}{April 2022}
 \resumeItemListStart
-\resumeItem{Employed reinforcement learning to train a model on historical stock metrics, assessing the trading robot's performance on out-of-sample data, outperforming a manual trading strategy by 30\%.}
+\resumeItemBulletless{Employed reinforcement learning to train a model on historical stock metrics, assessing the trading robot's performance on out-of-sample data, outperforming a manual trading strategy by 30\%.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{Multi-class Random Forest} $|$ \href{https://github.com/one2blame/cs6601}{\underline{https://github.com/one2blame/cs6601}} $|$ \emph{Python, NumPy}}{July 2022}
 \resumeItemListStart
-\resumeItem{Improved upon existing multi-class classification tree and random forest implementations, achieving a classification accuracy of 84\% on out-of-sample data.}
+\resumeItemBulletless{Improved upon existing multi-class classification tree and random forest implementations, achieving a classification accuracy of 84\% on out-of-sample data.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Extensible MapReduce Framework} $|$ \href{https://github.com/one2blame/cs6210}{\underline{https://github.com/one2blame/cs6210}} $|$ \emph{C++, gRPC, Protobuf}}{April 2020}
+\resumeItemListStart
+\resumeItemBulletless{Designed an extensible, distributed system to MapReduce a large corpus of data, applying data sharding and load balancing to enhance performance.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Distributed File System} $|$ \href{https://github.com/one2blame/cs6200}{\underline{https://github.com/one2blame/cs6200}} $|$ \emph{C++, gRPC, Protobuf}}{November 2019}
+\resumeItemListStart
+\resumeItemBulletless{Engineered a concurrent server capable of handling clients initiating asynchronous gRPC requests to upload and download files.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{SDN Firewall} $|$ \href{https://github.com/one2blame/cs6250}{\underline{https://github.com/one2blame/cs6250}} $|$ \emph{Python, Mininet, OpenFlow, POX}}{March 2021}
+\resumeItemListStart
+\resumeItemBulletless{Constructed an emulated network to test software-defined network firewall rules, programming real-time traffic inspection to enforce access controls.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -222,7 +234,7 @@
 {Cyber Basic Officer Leader Course, Distinguished Honor Graduate}{December 2018}
 \resumeSubheading
 {Mississippi State University}{Starkville, MS}
-{Bachelor of Science, Computer Science, 3.61 GPA (Magna Cum Laude)}{December 2017}
+{Bachelor of Science, Computer Engineering, 3.61 GPA}{December 2017}
 \resumeSubHeadingListEnd
 
 %-----------CERTIFICATIONS-----------
