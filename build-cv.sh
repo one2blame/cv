@@ -35,4 +35,4 @@ build_html
 
 mkdir -p docs
 mv cv.pdf docs
-mv cv.html docs
+mv cv.html docs/index.html
