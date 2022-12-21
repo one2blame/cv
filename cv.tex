@@ -88,7 +88,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-17cm-\leftmargin\relax]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-17.25cm-\leftmargin\relax]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -99,22 +99,14 @@
 
 %----------HEADING----------
 \begin{center}
-	\textbf{\Huge \scshape Austin J. Heath} \\ \vspace{4pt}
-	\small +1 601-596-2842 \hspace{3pt} $|$ \hspace{3pt} \href{mailto:austin@heath.codes}{austin@heath.codes} \hspace{3pt} $|$ \hspace{3pt} \href{https://austin.heath.codes}{\underline{https://austin.heath.codes}} \\ \vspace{4pt}
-	\href{https://github.com/one2blame}{\underline{https://github.com/one2blame}} \hspace{3pt} $|$ \hspace{3pt}	\href{https://linkedin.com/in/austinjheath}{\underline{https://linkedin.com/in/austinjheath}} \\ \vspace{5pt}
-	Clearance: Top Secret (TS/SCI) with CI Polygraph \hspace{3pt} $|$ \hspace{3pt} Willing to relocate
+	\begin{multicols}{2}
+		\textbf{\Huge \scshape Austin Heath} \\ \vspace{4pt}
+		\small +1 601-596-2842 \hspace{3pt} $|$ \hspace{3pt} \href{mailto:austin@heath.codes}{austin@heath.codes} \\ \vspace{4pt}
+		\href{https://austin.heath.codes}{\underline{https://austin.heath.codes}} \\ \vspace{4pt}
+		Willing to relocate \\ \vspace{4pt}
+		Clearance: Top Secret (TS/SCI) with CI Polygraph
+	\end{multicols}
 \end{center}
-
-%-----------EDUCATION-----------
-\section{\textbf{Education}}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Georgia Institute of Technology}{Atlanta, GA}
-{Master of Science, Computer Science (Specialization: Computing Systems), 4.0 GPA}{December 2022}
-\resumeSubheading
-{Mississippi State University}{Starkville, MS}
-{Bachelor of Science, Computer Engineering, 3.61 GPA}{December 2017}
-\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{\textbf{Experience}}
@@ -124,19 +116,19 @@
 {Senior Software Engineer}{June 2021 – Present}
 {U.S. Army Cyber Command - Cyber Solutions Development}{Fort Gordon, GA}
 \resumeItemListStart
-\resumeItem{Managed a team of 12 security researchers using tools like IDAPro, BinDiff, LLVM, and QEMU, to research, discover, and exploit vulnerabilities in embedded devices and Windows applications, saving the organization over \$1mil in expected costs when compared to similar vendor solutions.}
+\resumeItem{Managed a team of 12 security researchers using tools like IDAPro, Ghidra, LLVM, and QEMU, to research, discover, and exploit vulnerabilities in embedded devices and Windows applications, enabling the organization to avoid costs procuring similar vendor solutions, resulting in a significant savings.}
 \resumeItem{Developed a shellcode library using C, Python, and CMake, enabling 20 developers to cross-compile ubiquitous shellcodes for Intel, ARM, MIPS, and PowerPC processor architectures, eliminating duplicate shellcodes across 9 exploit development projects.}
-\resumeItem{Triaged 5 public vulnerability disclosures, releasing 7 bespoke exploit tools, providing initial access to computer networks of interest for 6 operations teams across 3 organizations and 4 uniformed services.}
+% \resumeItem{Triaged 5 public vulnerability disclosures, releasing 7 bespoke exploit tools, providing initial access to computer networks of interest for 6 operations teams across 3 organizations and 4 uniformed services.}
 \resumeItem{Instructed 5 operations teams on the effective use of exploit tools, increasing stakeholder interaction and influencing organizational policy to emphasize consistent stakeholder engagement.}
-\resumeItem{Hosted 12 monthly training events covering reverse-engineering and exploit development techniques, increasing the organization's number of trained security researchers by 25\%.}
-\resumeItem{Overhauled the organization's technical documentation process using Markdown, LaTeX, Pandoc, CMake, and Python, enabling developers to better detect documentation errors prior to release.}
+% \resumeItem{Hosted 12 monthly training events covering reverse-engineering and exploit development techniques, increasing the organization's number of trained security researchers by 25\%.}
+% resumeItem{Overhauled the organization's technical documentation process using Markdown, LaTeX, Pandoc, CMake, and Python, enabling developers to better detect documentation errors prior to release.}
 \resumeItemListEnd
 
 \resumeSubheading
 {Software Engineer}{February 2018 – May 2021}
 {U.S. Army Cyber Command - Cyber Solutions Development}{Fort Gordon, GA}
 \resumeItemListStart
-\resumeItem{Redesigned the organization's binary obfuscation methods using LLVM, rendering obfuscated artifacts unrecognizable compared to the original, inhibiting reverse-engineering efforts and preventing developers from spending 40 hours manually obfuscating existing projects.}
+% \resumeItem{Redesigned the organization's binary obfuscation methods using LLVM, rendering obfuscated artifacts unrecognizable compared to the original, inhibiting reverse-engineering efforts and preventing developers from spending 40 hours manually obfuscating existing projects.}
 \resumeItem{Implemented 11 modules for a Python exploit framework, automating common operator tasks and reducing 50\% of human interaction, increasing mission efficiency for 5 operations teams.}
 \resumeItem{Automated the organization's compilation, testing, release, and deployment process by integrating existing projects into GitLab CI, expediting tool development and release for 3 developer teams.}
 \resumeItem{Obfuscated web-based malware written in PHP using open source software and designed command, control, and configuration mechanisms using Python, enabling 3 operations teams across 2 uniformed services to maintain persistent access to web targets of interest.}
@@ -144,74 +136,48 @@
 
 \resumeSubHeadingListEnd
 
-%-----------CERTIFICATIONS-----------
-\section{\textbf{Certifications}}
-\vspace{-5mm}
-\setlength{\columnsep}{50pt}
-\begin{multicols}{2}
-	\begin{itemize}[noitemsep]
-		\small{\item[] {Offensive Security Certified Professional (OSCP) \\
-			\mbox{Certified Information Systems Security Professional (CISSP)} \\
-			GIAC Reverse Engineering Malware (GREM) \\
-			CompTIA Security+ (Sec+) \\
-			Certified Ethical Hacker (CEH) \\
-			Cisco Certified Network Associate (CCNA)
-			}}
-	\end{itemize}
-\end{multicols}
-
-%-----------TECHNICAL SKILLS-----------
-\section{\textbf{Technical Skills}}
-\begin{itemize}[leftmargin=0.15in, label={}]
-	\small{\item{
-		            \textbf{Languages}{: Python, C/C++, x86, amd64, MIPS, ARM, PowerPC, TileGX, Java} \\
-		            \textbf{Libraries}{: gRPC, OpenMP/MPI, libvirt, libcurl, POX, Mininet, OpenFlow, LLVM, Z3, NumPy, SciPy, pandas, pwntools} \\
-		            \textbf{Developer Tools}{: Git, GitLab CI, Atlassian Bamboo, Jupyter, Docker, QEMU, GDB, WinDbg, angr, AFL, KLEE} \\
-		            \textbf{Applications}{: VMware, VirtualBox, Vagrant, Ghidra, IDAPro, BinaryNinja, BinDiff} \\
-		            \textbf{Frameworks}{: Metasploit, WordPress}
-		      }}
-\end{itemize}
-
 %-----------PROJECTS-----------
 \section{\textbf{Projects}}
 
 \resumeSubHeadingListStart
 
-\resumeProjectHeading
-{\textbf{Splinter Shell} $|$ \href{https://github.com/one2blame/splintershell}{\underline{https://github.com/one2blame/splintershell}} $|$ \emph{Python, Scapy, Scikit-learn, amd64}}{April 2021 - Present}
-\resumeItemListStart
-\resumeItemBulletless{Employed unsupervised learning techniques to train a machine learning model on a corpus of packet captures, classifying normal and malicious network traffic and encoding shellcodes to bypass intrusion prevention systems.}
-\resumeItemListEnd
+\iffalse
+	\resumeProjectHeading
+	{\textbf{Splinter Shell} $|$ \href{https://github.com/one2blame/splintershell}{\underline{https://github.com/one2blame/splintershell}} $|$ \emph{Python, Scapy, Scikit-learn, amd64}}{April 2021 - Present}
+	\resumeItemListStart
+	\resumeItemBulletless{Employed unsupervised learning techniques to train a machine learning model on a corpus of packet captures, classifying normal and malicious network traffic and encoding shellcodes to bypass intrusion prevention systems.}
+	\resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{The Dark Arts} $|$ \href{https://one2bla.me/the-dark-arts/}{\underline{https://one2bla.me/the-dark-arts/}} $|$ \emph{C, Python, Ghidra, pwntools, angr}}{July 2020 - Present}
-\resumeItemListStart
-\resumeItemBulletless{Composed a blog to catalogue my adventures in reverse-engineering and binary exploitation, serving as a training resource for junior security researchers.}
-\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{The Dark Arts} $|$ \href{https://one2bla.me/the-dark-arts/}{\underline{https://one2bla.me/the-dark-arts/}} $|$ \emph{C, Python, Ghidra, pwntools, angr}}{July 2020 - Present}
+	\resumeItemListStart
+	\resumeItemBulletless{Composed a blog to catalogue my adventures in reverse-engineering and binary exploitation, serving as a training resource for junior security researchers.}
+	\resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Constraint-based Variable Analyzer} $|$ \href{https://github.com/one2blame/cs6340}{\underline{https://github.com/one2blame/cs6340}} $|$ \emph{C++, LLVM, Z3}}{October 2021}
-\resumeItemListStart
-\resumeItemBulletless{Transformed programs into LLVM intermediate representation (IR), derived Datalog facts from the instructions, and designed a reaching definition and live variables analysis using Z3.}
-\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Constraint-based Variable Analyzer} $|$ \href{https://github.com/one2blame/cs6340}{\underline{https://github.com/one2blame/cs6340}} $|$ \emph{C++, LLVM, Z3}}{October 2021}
+	\resumeItemListStart
+	\resumeItemBulletless{Transformed programs into LLVM intermediate representation (IR), derived Datalog facts from the instructions, and designed a reaching definition and live variables analysis using Z3.}
+	\resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Data Dependency Tracker} $|$ \href{https://github.com/one2blame/cs6747}{\underline{https://github.com/one2blame/cs6747}} $|$ \emph{Python, Ghidra}}{July 2021}
-\resumeItemListStart
-\resumeItemBulletless{Wrote Python scripts to parse Ghidra disassembly, generating control flow graphs and data dependency tracking for functions in malware specimens.}
-\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Data Dependency Tracker} $|$ \href{https://github.com/one2blame/cs6747}{\underline{https://github.com/one2blame/cs6747}} $|$ \emph{Python, Ghidra}}{July 2021}
+	\resumeItemListStart
+	\resumeItemBulletless{Wrote Python scripts to parse Ghidra disassembly, generating control flow graphs and data dependency tracking for functions in malware specimens.}
+	\resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Stock Trading Robot} $|$ \href{https://github.com/one2blame/cs7646}{\underline{https://github.com/one2blame/cs7646}} $|$ \emph{Python, NumPy, pandas}}{April 2022}
-\resumeItemListStart
-\resumeItemBulletless{Employed reinforcement learning to train a model on historical stock metrics, assessing the trading robot's performance on out-of-sample data, outperforming a manual trading strategy by 30\%.}
-\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Stock Trading Robot} $|$ \href{https://github.com/one2blame/cs7646}{\underline{https://github.com/one2blame/cs7646}} $|$ \emph{Python, NumPy, pandas}}{April 2022}
+	\resumeItemListStart
+	\resumeItemBulletless{Employed reinforcement learning to train a model on historical stock metrics, assessing the trading robot's performance on out-of-sample data, outperforming a manual trading strategy by 30\%.}
+	\resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Multi-class Random Forest} $|$ \href{https://github.com/one2blame/cs6601}{\underline{https://github.com/one2blame/cs6601}} $|$ \emph{Python, NumPy}}{July 2022}
-\resumeItemListStart
-\resumeItemBulletless{Improved upon existing multi-class classification tree and random forest implementations, achieving a classification accuracy of 84\% on out-of-sample data.}
-\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Multi-class Random Forest} $|$ \href{https://github.com/one2blame/cs6601}{\underline{https://github.com/one2blame/cs6601}} $|$ \emph{Python, NumPy}}{July 2022}
+	\resumeItemListStart
+	\resumeItemBulletless{Improved upon existing multi-class classification tree and random forest implementations, achieving a classification accuracy of 84\% on out-of-sample data.}
+	\resumeItemListEnd
+\fi
 
 \resumeProjectHeading
 {\textbf{Extensible MapReduce Framework} $|$ \href{https://github.com/one2blame/cs6210}{\underline{https://github.com/one2blame/cs6210}} $|$ \emph{C++, gRPC, Protobuf}}{April 2020}
@@ -233,41 +199,43 @@
 
 \resumeSubHeadingListEnd
 
-%-----------VOLUNTEERING AND COMMUNITY SERVICE-----------
-\section{\textbf{Volunteering and Community Service}}
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
 \resumeSubHeadingListStart
-
 \resumeSubheading
-{Mentor}{February 2022 – May 2022}
-{Grovetown High-school Robotics Club}{Grovetown, GA}
-\resumeItemListStart
-\resumeItemBulletless{Mentored high-school students on robotics mechanical engineering, setup of electrical components, and development of Arduino code for controller logic. Lead the Grovetown High-school Robotics Club to take 1st place in the Central Savannah River Area (CSRA) Fully Wired high-school robotics competition.}
-\resumeItemListEnd
-
+{Georgia Institute of Technology}{Atlanta, GA}
+{Master of Science, Computer Science (Specialization: Computing Systems), 4.0 GPA}{December 2022}
 \resumeSubheading
-{Volunteer}{May 2021 – July 2021}
-{Air Force Association CyberPatriot}{Augusta, GA}
-\resumeItemListStart
-\resumeItemBulletless{Moderated a Virtual CyberPatriot Summer Camp via Zoom and provided instruction to high-school students on techniques to harden the security posture of various Linux distributions.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Volunteer}{August 2019 – March 2020}
-{Girls Who Code}{Augusta, GA}
-\resumeItemListStart
-\resumeItemBulletless{Facilitated club meetings and taught 6th - 12th grade girls Python game development.}
-\resumeItemListEnd
-
+{Mississippi State University}{Starkville, MS}
+{Bachelor of Science, Computer Engineering, 3.61 GPA}{December 2017}
 \resumeSubHeadingListEnd
 
-%-----------ACHIEVEMENTS AND AWARDS-----------
-\section{\textbf{Achievements and Awards}}
-\setlength{\columnsep}{50pt}
-\begin{itemize}[noitemsep]
-	\small{\item[] {\mbox{CISA President's Cup Cybersecurity Competition - 3rd Place} \hspace{1cm}
-		\mbox{3 x Army Achievement Medals}
-		}}
+%-----------TECHNICAL SKILLS-----------
+\section{\textbf{Technical Skills}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		            \textbf{Languages}{: Python, Lua, C/C++, Java, x86, x86\_64, MIPS, ARM, PowerPC, TileGX} \\
+		            \textbf{Libraries}{: gRPC, OpenMP/MPI, libvirt, libcurl, POX, Mininet, OpenFlow} \\
+		            \textbf{Developer Tools}{: Git, GitLab CI, Atlassian Bamboo, Jupyter, Docker, CMake, QEMU, VirtualBox, Vagrant, GDB}
+		      }}
 \end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{\textbf{Certifications}}
+\vspace{-5mm}
+\setlength{\columnsep}{50pt}
+\begin{multicols}{2}
+	\begin{itemize}[noitemsep]
+		\small{\item[] {GIAC Reverse Engineering Malware (GREM) \\
+			Offensive Security Certified Professional (OSCP) \\
+			\mbox{Certified Information Systems Security Professional (CISSP)} \\
+			CompTIA Security+ (Sec+) \\
+			Certified Ethical Hacker (CEH) \\
+			Cisco Certified Network Associate (CCNA)
+			}}
+	\end{itemize}
+\end{multicols}
+
 
 %-------------------------------------------
 \end{document}
